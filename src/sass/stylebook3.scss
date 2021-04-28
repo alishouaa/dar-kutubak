@@ -1,0 +1,258 @@
+  $color-primary:black;
+  $color-secondry:white;
+  $color-initial: #004466;
+  @font-face {
+      font-family: ar-font;
+      src: url(../font/Cairo-Regular.ttf);
+  }
+  
+  body {
+      background-color: rgb(247, 235, 235);
+      font-family: ar-font;
+      width: 100%;
+      position: relative;
+  }
+  
+  header#navbar {
+      .logrow-three {
+          padding-top: 20px;
+          ul {
+              border-left: 1px solid gray;
+              li {
+                  display: inline-block;
+                  list-style: none;
+                  h1 {
+                      color: $color-initial;
+                  }
+                  img {
+                      width: 120px;
+                      height: 120px;
+                  }
+              }
+          }
+          p {
+              line-height: 2;
+              font-size: 20px;
+              padding-top: 15px;
+          }
+      }
+      .nav-three {
+          text-align: center;
+          ul {
+              background-color: $color-initial;
+              padding: 12px;
+              li {
+                  display: inline;
+                  list-style: none;
+                  padding: 8px 70px;
+                  color: $color-secondry;
+                  font-size: 18px;
+              }
+              li:hover {
+                  background-color: $color-secondry;
+                  color: $color-initial;
+                  transition: 0.3s ease-in-out;
+              }
+              a {
+                  text-decoration: none;
+              }
+          }
+      }
+  }
+  
+  section#definition {
+      padding-top: 20px;
+      padding-bottom: 25px;
+      p {
+          line-height: 2.5;
+          color: $color-primary;
+      }
+      .images {
+          img {
+              width: 100%;
+          }
+      }
+  }
+  
+  section#book {
+      a {
+          text-decoration: none;
+          color: $color-primary;
+      }
+      a:hover {
+          color: $color-initial;
+      }
+      h2 {
+          padding: 30px 0 50px;
+      }
+      img {
+          height: 500px;
+          border: 1px solid $color-primary;
+      }
+      img:hover,
+      img:focus {
+          opacity: 0.5;
+          border: 2px solid $color-primary;
+      }
+      .cen {
+          padding: 200px 0;
+      }
+  }
+  
+  section#cal-three {
+      background-color: rgb(63, 59, 59);
+      padding-top: 50px;
+      form button {
+          background-color: $color-initial;
+          color: $color-secondry;
+      }
+      .namzg {
+          padding-bottom: 70px;
+          ul {
+              border-bottom: 1px solid $color-secondry;
+              li {
+                  color: $color-secondry;
+                  padding: 15px 0px;
+                  list-style: none;
+              }
+          }
+      }
+  }
+  
+  section#coverbook-three {
+      .drop {
+          padding-top: 20px;
+          img {
+              border: 1px solid $color-initial;
+          }
+          ul {
+              padding-top: 80px;
+              li {
+                  list-style: none;
+                  padding: 20px 0;
+                  font-size: 23px;
+                  color: $color-initial;
+                  span {
+                      color: $color-primary;
+                  }
+                  button {
+                      background-color: $color-initial;
+                      color: $color-secondry;
+                      padding: 10px;
+                  }
+                  button:hover {
+                      background-color: #002233;
+                  }
+              }
+          }
+          p {
+              line-height: 2.5;
+              color: $color-primary;
+              padding: 10px 30px;
+              font-size: 18px;
+              background-color: rgb(236, 226, 226);
+              border-radius: 5px;
+          }
+      }
+      .image {
+          padding: 50px 0;
+          #carouselwebsite {
+              padding-bottom: 50px;
+              span {
+                  padding: 20px;
+                  background-color: $color-primary;
+                  cursor: pointer;
+                  .custom {
+                      color: $color-secondry;
+                      font-size: 40px;
+                  }
+              }
+          }
+      }
+      .side {
+          img {
+              border: 1px solid $color-primary;
+              cursor: pointer;
+          }
+          img:hover,
+          img:focus {
+              border: 2px solid $color-primary;
+          }
+      }
+  }
+  
+  iframe {
+      width: 100%;
+  }
+  
+  #loginModal .modal-content {
+      .modal-body h4 {
+          color: green;
+      }
+      .modal-footer .customi-i {
+          font-size: 70px;
+          margin: 50px 0 50px 210px;
+          border: 2px solid green;
+          border-radius: 50%;
+          padding: 10px;
+      }
+  }
+  
+  @media (max-width:990px) {
+      header#navbar .logrow-three ul {
+          border-left: none;
+      }
+      header#navbar .nav-three ul li {
+          display: block;
+          list-style: none;
+          padding: 10px 60px;
+          color: $color-secondry;
+          font-size: 18px;
+      }
+      section#book .cen {
+          display: none;
+      }
+      section#book img {
+          margin-top: 50px;
+      }
+      section#coverbook-three .drop ul {
+          padding-top: 10px;
+      }
+      section#coverbook-three .image #carouselwebsite span {
+          padding: 5px;
+          background-color: $color-primary;
+          cursor: pointer;
+      }
+      .image #carouselwebsite span.custom {
+          color: $color-secondry;
+          font-size: 10px;
+      }
+  }
+  
+  @media (max-width:1199px) {
+      header#navbar .logrow-three p {
+          padding-top: 50px;
+      }
+      section#definition .images {
+          padding-top: 50px;
+      }
+      section#definition .images img {
+          padding-top: 70px;
+      }
+  }
+  
+  @media (max-width:991px) {
+      section#book .cen {
+          padding: 100px 0;
+      }
+      header#navbar .logrow-three ul {
+          border-left: none;
+          text-align: center;
+      }
+      header#navbar .logrow-three p {
+          padding-top: 0;
+      }
+      section#cal-three .namzg {
+          text-align: center;
+      }
+  }
