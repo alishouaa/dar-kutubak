@@ -1,9 +1,20 @@
 $color-primary:black;
 $color-secondry:white;
 $color-initial:brown;
+$color-book-one:#0066ff;
+$color-book-two:#804000;
+$color-book-tree:#003366;
 @font-face {
     font-family: ar-font;
     src: url(../font/Cairo-Regular.ttf);
+}
+
+@mixin background($color) {
+    background-color: $color;
+}
+
+@mixin color($color) {
+    color: ($color);
 }
 
 body {
@@ -38,8 +49,19 @@ header#navbar {
     }
     .nav {
         text-align: center;
+        .bck-home {
+            @include background($color-initial);
+        }
+        .bck-one {
+            @include background($color-book-one);
+        }
+        .bck-two {
+            @include background($color-book-two);
+        }
+        .bck-tree {
+            @include background($color-book-tree);
+        }
         ul {
-            background-color: $color-initial;
             padding: 12px;
             li {
                 display: inline;
@@ -96,6 +118,81 @@ section#book {
     }
     .cen {
         padding: 200px 0;
+    }
+}
+
+section#coverbook {
+    .drop {
+        padding-top: 20px;
+        img {
+            border: 1px solid $color-initial;
+        }
+        .color-one {
+            @include color($color-book-one);
+        }
+        .color-two {
+            @include color($color-book-two);
+        }
+        .color-tree {
+            @include color($color-book-tree);
+        }
+        ul {
+            padding-top: 80px;
+            li {
+                list-style: none;
+                padding: 20px 0;
+                font-size: 23px;
+                span {
+                    color: $color-primary;
+                }
+                button {
+                    color: $color-secondry;
+                    padding: 10px;
+                }
+                .bck-one {
+                    @include background($color-book-one);
+                }
+                .bck-two {
+                    @include background($color-book-two);
+                }
+                .bck-tree {
+                    @include background($color-book-tree);
+                }
+            }
+        }
+        p {
+            line-height: 2.5;
+            color: $color-primary;
+            padding: 10px 30px;
+            font-size: 18px;
+            background-color: rgb(236, 226, 226);
+            border-radius: 5px;
+        }
+    }
+    .image {
+        padding: 50px 0;
+        #carouselwebsite {
+            padding-bottom: 50px;
+            span {
+                padding: 20px;
+                background-color: $color-primary;
+                cursor: pointer;
+                .custom {
+                    color: $color-secondry;
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    .side {
+        img {
+            border: 1px solid $color-primary;
+            cursor: pointer;
+        }
+        img:hover,
+        img:focus {
+            border: 2px solid $color-primary;
+        }
     }
 }
 
@@ -156,68 +253,6 @@ iframe {
     .image #carouselwebsite span.custom {
         color: $color-secondry;
         font-size: 10px;
-    }
-}
-
-section#coverbook {
-    .drop {
-        padding-top: 20px;
-        img {
-            border: 1px solid $color-initial;
-        }
-        ul {
-            padding-top: 80px;
-            li {
-                list-style: none;
-                padding: 20px 0;
-                font-size: 23px;
-                color: $color-initial;
-                span {
-                    color: $color-primary;
-                }
-                button {
-                    background-color: $color-initial;
-                    color: $color-secondry;
-                    padding: 10px;
-                }
-                button:hover {
-                    background-color: #002233;
-                }
-            }
-        }
-        p {
-            line-height: 2.5;
-            color: $color-primary;
-            padding: 10px 30px;
-            font-size: 18px;
-            background-color: rgb(236, 226, 226);
-            border-radius: 5px;
-        }
-    }
-    .image {
-        padding: 50px 0;
-        #carouselwebsite {
-            padding-bottom: 50px;
-            span {
-                padding: 20px;
-                background-color: $color-primary;
-                cursor: pointer;
-                .custom {
-                    color: $color-secondry;
-                    font-size: 40px;
-                }
-            }
-        }
-    }
-    .side {
-        img {
-            border: 1px solid $color-primary;
-            cursor: pointer;
-        }
-        img:hover,
-        img:focus {
-            border: 2px solid $color-primary;
-        }
     }
 }
 
