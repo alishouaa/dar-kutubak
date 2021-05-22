@@ -110,6 +110,7 @@ section#book {
     img {
         height: 500px;
         border: 1px solid $color-primary;
+        width: 100%;
     }
     img:hover,
     img:focus {
@@ -126,6 +127,7 @@ section#coverbook {
         padding-top: 20px;
         img {
             border: 1px solid $color-initial;
+            width: 100%;
         }
         .color-one {
             @include color($color-book-one);
